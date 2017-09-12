@@ -1,0 +1,22 @@
+﻿生成启动时间为 2017/9/12 9:39:19。
+     1>项目“C:\Users\YorksonChang\documents\visual studio 2015\Projects\CG\EX1\RedTriangle\RedTriangle\RedTriangle.vcxproj”在节点 2 上(Build 个目标)。
+     1>ClCompile:
+         C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /sdl /Od /Oy- /D _MBCS /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"Debug\\" /Fd"Debug\vc140.pdb" /Gd /TP /analyze- /errorReport:prompt main.cpp
+         main.cpp
+     1>c:\users\yorksonchang\documents\visual studio 2015\projects\cg\ex1\redtriangle\redtriangle\include\angel.h(63): warning C4305: “初始化”: 从“double”到“GLfloat”截断
+     1>c:\users\yorksonchang\documents\visual studio 2015\projects\cg\ex1\redtriangle\redtriangle\include\mat.h(698): warning C4244: “=”: 从“double”转换到“GLfloat”，可能丢失数据
+     1>c:\users\yorksonchang\documents\visual studio 2015\projects\cg\ex1\redtriangle\redtriangle\include\mat.h(699): warning C4244: “=”: 从“double”转换到“GLfloat”，可能丢失数据
+     1>c:\users\yorksonchang\documents\visual studio 2015\projects\cg\ex1\redtriangle\redtriangle\include\mat.h(700): warning C4244: “=”: 从“double”转换到“GLfloat”，可能丢失数据
+     1>c:\users\yorksonchang\documents\visual studio 2015\projects\cg\ex1\redtriangle\redtriangle\include\mat.h(721): warning C4244: “=”: 从“double”转换到“GLfloat”，可能丢失数据
+     1>c:\users\yorksonchang\documents\visual studio 2015\projects\cg\ex1\redtriangle\redtriangle\include\mat.h(723): warning C4244: “=”: 从“double”转换到“GLfloat”，可能丢失数据
+     1>c:\users\yorksonchang\documents\visual studio 2015\projects\cg\ex1\redtriangle\redtriangle\include\mat.h(726): warning C4244: “=”: 从“double”转换到“GLfloat”，可能丢失数据
+     1>c:\users\yorksonchang\documents\visual studio 2015\projects\cg\ex1\redtriangle\redtriangle\include\mat.h(743): warning C4244: “=”: 从“double”转换到“GLfloat”，可能丢失数据
+       Link:
+         C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\YorksonChang\documents\visual studio 2015\Projects\CG\EX1\RedTriangle\Debug\RedTriangle.exe" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /Debug /PDB:"C:\Users\YorksonChang\documents\visual studio 2015\Projects\CG\EX1\RedTriangle\Debug\RedTriangle.pdb" /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\Users\YorksonChang\documents\visual studio 2015\Projects\CG\EX1\RedTriangle\Debug\RedTriangle.lib" /MACHINE:X86 Debug\InitShader.obj
+         Debug\main.obj
+         RedTriangle.vcxproj -> C:\Users\YorksonChang\documents\visual studio 2015\Projects\CG\EX1\RedTriangle\Debug\RedTriangle.exe
+     1>已完成生成项目“C:\Users\YorksonChang\documents\visual studio 2015\Projects\CG\EX1\RedTriangle\RedTriangle\RedTriangle.vcxproj”(Build 个目标)的操作。
+
+已成功生成。
+
+已用时间 00:00:03.41
