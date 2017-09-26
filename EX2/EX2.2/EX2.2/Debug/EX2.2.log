@@ -1,0 +1,27 @@
+﻿生成启动时间为 2017/9/26 16:53:34。
+     1>项目“C:\Users\YorksonChang\Documents\Visual Studio 2015\Projects\CG\EX2\EX2.2\EX2.2\EX2.2.vcxproj”在节点 2 上(Build 个目标)。
+     1>C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\V140\Microsoft.CppBuild.targets(392,5): warning MSB8028: The intermediate directory (Debug\) contains files shared from another project (EX2.2.vcxproj).  This can lead to incorrect clean and rebuild behavior.
+     1>ClCompile:
+         C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /sdl /Od /Oy- /D _MBCS /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"Debug\\" /Fd"Debug\vc140.pdb" /Gd /TP /analyze- /errorReport:prompt InitShader.cpp main.cpp
+         main.cpp
+     1>c:\users\yorksonchang\documents\visual studio 2015\projects\cg\ex2\ex2.2\ex2.2\include\angel.h(63): warning C4305: “初始化”: 从“double”到“GLfloat”截断
+     1>c:\users\yorksonchang\documents\visual studio 2015\projects\cg\ex2\ex2.2\ex2.2\include\mat.h(698): warning C4244: “=”: 从“double”转换到“GLfloat”，可能丢失数据
+     1>c:\users\yorksonchang\documents\visual studio 2015\projects\cg\ex2\ex2.2\ex2.2\include\mat.h(699): warning C4244: “=”: 从“double”转换到“GLfloat”，可能丢失数据
+     1>c:\users\yorksonchang\documents\visual studio 2015\projects\cg\ex2\ex2.2\ex2.2\include\mat.h(700): warning C4244: “=”: 从“double”转换到“GLfloat”，可能丢失数据
+     1>c:\users\yorksonchang\documents\visual studio 2015\projects\cg\ex2\ex2.2\ex2.2\include\mat.h(721): warning C4244: “=”: 从“double”转换到“GLfloat”，可能丢失数据
+     1>c:\users\yorksonchang\documents\visual studio 2015\projects\cg\ex2\ex2.2\ex2.2\include\mat.h(723): warning C4244: “=”: 从“double”转换到“GLfloat”，可能丢失数据
+     1>c:\users\yorksonchang\documents\visual studio 2015\projects\cg\ex2\ex2.2\ex2.2\include\mat.h(726): warning C4244: “=”: 从“double”转换到“GLfloat”，可能丢失数据
+     1>c:\users\yorksonchang\documents\visual studio 2015\projects\cg\ex2\ex2.2\ex2.2\include\mat.h(743): warning C4244: “=”: 从“double”转换到“GLfloat”，可能丢失数据
+     1>c:\users\yorksonchang\documents\visual studio 2015\projects\cg\ex2\ex2.2\ex2.2\main.cpp(58): warning C4244: “参数”: 从“double”转换到“GLfloat”，可能丢失数据
+         正在生成代码...
+         正在跳过...(未检测到相关更改)
+         InitShader.cpp
+       Link:
+         C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\YorksonChang\Documents\Visual Studio 2015\Projects\CG\EX2\EX2.2\Debug\LoadModel.exe" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /Debug /PDB:"C:\Users\YorksonChang\Documents\Visual Studio 2015\Projects\CG\EX2\EX2.2\Debug\LoadModel.pdb" /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\Users\YorksonChang\Documents\Visual Studio 2015\Projects\CG\EX2\EX2.2\Debug\LoadModel.lib" /MACHINE:X86 Debug\InitShader.obj
+         Debug\main.obj
+         EX2.2.vcxproj -> C:\Users\YorksonChang\Documents\Visual Studio 2015\Projects\CG\EX2\EX2.2\Debug\LoadModel.exe
+     1>已完成生成项目“C:\Users\YorksonChang\Documents\Visual Studio 2015\Projects\CG\EX2\EX2.2\EX2.2\EX2.2.vcxproj”(Build 个目标)的操作。
+
+已成功生成。
+
+已用时间 00:00:04.71
