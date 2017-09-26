@@ -7,7 +7,9 @@ const vec3 BLACK(0.0, 0.0, 0.0);
 const vec3 RED(1.0, 0.0, 0.0);
 const vec3 GREEN(0.0, 1.0, 0.0);
 const vec3 BLUE(0.0, 0.0, 1.0);
-const vec3 YELLOW(0.0, 0.8, 0.8);
+const vec3 YELLOW(1.0, 1.0, 0.0);  // Yellow
+const vec3 CYAN(0.0, 1.0, 1.0); // Cyan
+const vec3 MAGENTA(1.0, 0.0, 1.0);  // Magenta
 
 const int CIRCLE_NUM_POINTS = 100;
 const int ELLIPSE_NUM_POINTS = 100;
@@ -72,21 +74,21 @@ void generateTrianglePoints(vec2 vertices[], vec3 colors[], int startVertexIndex
 		vertices[startVertexIndex + i] = vec2(sin(currentAngle), cos(currentAngle)) * scale + center;
 	}
 
-	colors[startVertexIndex] = RED;
-	colors[startVertexIndex + 1] = GREEN;
-	colors[startVertexIndex + 2] = BLUE;
+	colors[startVertexIndex] = YELLOW;
+	colors[startVertexIndex + 1] = CYAN;
+	colors[startVertexIndex + 2] = MAGENTA;
 }
 
 void generateSquarePoints(vec2 vertices[], vec3 colors[], int squareNumber, int startVertexIndex)
 {
-	double scale = 0.90;
-	double scaleDecrease = 0.15;
+	double scale = 0.60;
+	double scaleDecrease = 0.1;
 	vec2 center(0.0, -0.25);
 	int vertexIndex = startVertexIndex;
 
 	for (int i = 0; i < squareNumber; ++i) {
 		vec3 currentColor;
-		currentColor = (i % 2) ? RED : BLUE;
+		currentColor = (i % 2) ? BLACK : YELLOW;
 		for (int j = 0; j < 4; ++j) {
 			double currentAngle = getSquareAngle(j);
 			vertices[vertexIndex] = vec2(sin(currentAngle), cos(currentAngle)) * scale + center;
@@ -139,7 +141,7 @@ void init()
 	glVertexAttribPointer(cLocation, 3, GL_FLOAT, GL_FALSE, 0, BUFFER_OFFSET(sizeof(vertices)));
 
 	// 黑色背景
-	glClearColor(0.0, 0.0, 0.0, 1.0);
+	glClearColor(1.0, 1.0, 1.0, 1.0);
 }
 
 void display(void)
@@ -153,9 +155,50 @@ void display(void)
 	for (int i = 0; i < SQUARE_NUM; ++i) {
 		glDrawArrays(GL_TRIANGLE_FAN, TRIANGLE_NUM_POINTS + (i * 4), 4);
 	}
-	
+
+	// 绘制圆和椭圆
 	glDrawArrays(GL_POLYGON, SQUARE_NUM_POINTS + TRIANGLE_NUM_POINTS, CIRCLE_NUM_POINTS);
 	glDrawArrays(GL_POLYGON, SQUARE_NUM_POINTS + TRIANGLE_NUM_POINTS + CIRCLE_NUM_POINTS, ELLIPSE_NUM_POINTS);
+
+	// 绘制正弦曲线和余弦曲线
+	GLfloat x;
+	glBegin(GL_LINE_STRIP);
+	for (x = -1.0f / 0.1f; x<1.0f / 0.1f; x += 0.01f)
+	{
+		glVertex2f(x*0.1f, (sin(x)*0.1f) - 0.8);
+
+	}
+	glEnd();
+
+	GLfloat x1;
+	glBegin(GL_LINE_STRIP);
+	for (x1 = -1.0f / 0.1f; x1<1.0f / 0.1f; x1 += 0.01f)
+	{
+		glVertex2f(x1*0.1f, (cos(x1)*0.1f) - 0.8);
+	}
+	glEnd();
+
+	// 绘制五角形
+    glColor3f(1.0f, 0.0f, 0.0f);//红色的五角形
+	GLfloat a = 1 / (4 - 4 * cos(72 * M_PI / 180));
+	GLfloat bx = a * cos(18 * M_PI / 180);
+	GLfloat by = a * sin(18 * M_PI / 180);
+	GLfloat cy = -a * cos(18 * M_PI / 180);
+	GLfloat
+		PointA[2] = { 0 + 0.7, a  },
+		PointB[2] = { bx + 0.7, by  },
+		PointC[2] = { 0.25 + 0.7, cy },
+		PointD[2] = { -0.25 + 0.7, cy  },
+		PointE[2] = { -bx + 0.7, by  };  //将整体向右方平移
+	// 按照A->C->E->B->D->A的顺序，将五角星画出
+	glBegin(GL_LINE_LOOP);//闭合折线
+	glVertex2fv(PointA);
+	glVertex2fv(PointC);
+	glVertex2fv(PointE);
+	glVertex2fv(PointB);
+	glVertex2fv(PointD);
+	glEnd();
+
 
 	glFlush();
 }
@@ -164,7 +207,7 @@ int main(int argc, char **argv)
 {
 	glutInit(&argc, argv);
 	glutInitDisplayMode(GLUT_RGBA);
-	glutInitWindowSize(500, 500);
+	glutInitWindowSize(590, 500);
 	glutCreateWindow("2015160180_张跃_实验一");
 
 	glewExperimental = GL_TRUE;
